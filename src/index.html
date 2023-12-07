@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="window-tauri">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRASH</title>
+  </head>
+
+  <body>
+    <div id="root">
+      <div
+        style="
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <button
+          id="crash"
+          style="
+            color: white;
+            padding: 40px;
+            background: rebeccapurple;
+            border: 1px solid hotpink;
+          "
+        >
+          Crash
+        </button>
+      </div>
+    </div>
+    <script>
+      const { invoke } = window.__TAURI__.tauri;
+
+      async function crash() {
+        await invoke("crash");
+      }
+
+      document.querySelector("#crash").addEventListener("click", (e) => {
+        crash();
+      });
+    </script>
+  </body>
+</html>
