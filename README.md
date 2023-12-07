@@ -11,9 +11,9 @@ Crash prerequesites:
 
 ![](recording.gif)
 
-## Thread sanitized output
+## Thread sanitizer output
 
-<details><summary>Click for output</summary>
+<details><summary>CLICK: RC data race between two threads</summary>
 
 ```
 ==================
