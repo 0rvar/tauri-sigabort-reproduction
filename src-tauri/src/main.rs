@@ -5,8 +5,7 @@
 
 use tauri::{AppHandle, Manager};
 
-#[tokio::main]
-async fn main() {
+fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![crash])
         .run(tauri::generate_context!())
