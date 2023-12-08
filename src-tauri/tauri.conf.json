@@ -12,7 +12,13 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": false,
+      "clipboard": {
+        "all": true
+      },
+      "globalShortcut": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,

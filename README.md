@@ -5,7 +5,7 @@ This is a reproduction of a hard crash that happens when using Tauri.
 Crash prerequesites:
 
 - Overwhelm event loop with messages
-- `allowlist: all` in tauri config, or at least 5+ allowlisted actions. Somehow this affects how often it crashes.
+- Enable `clipboard` and/or `globalShortcut` in tauri config. When both are enabled, the crash happens 100% of the time. With one enabled, the crash happens ~50% of the time.
 
 ## Reproduction recording
 
